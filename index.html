@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
+    <title>Resistor Calculator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="background-mobile"></div>
+    <div class="line"></div>
+    
+    <div class="bandCount">
+        <input type="radio" id="four" name="radio" checked>
+        <label class="four" id="labelFour" for='four'>4 Band</label>
+        <input type="radio" id="five" name="radio">
+        <label class="five" id="labelFive" for='five'>5 Band</label>
+        <input type="radio" id="six" name="radio">
+        <label class="six" id="labelSix" for='six'>6 Band</label>
+    </div>
+
+    <div class="clear" id="clear"><i class="fas fa-undo"></i></div>
+
+    <div class="resistor">
+        <div class="resistorImage">
+            <img src="img/resistor.png" alt="">
+            <section class="boxFirstBand"></section>
+            <section class="boxSecondBand"></section>
+            <section class="boxThirdBand"></section>
+            <section class="boxFourthBand"></section>
+            <section class="boxFifthBand"></section>
+            <section class="boxSixthBand"></section>
+        </div>
+        <div class="resistorBand">
+            <div class="firstContainer">
+                <section class="firstBand"></section>
+                <select class="firstBandSelector " id="firstBandSelector">
+                    <option class="hiddenItem">-</option>
+                    <option class="hiddenFirstBand"></option>
+                    <option class="item" value=0>Black</option>
+                    <option class="item" value=1>Brown</option>
+                    <option class="item" value=2>Red</option>
+                    <option class="item" value=3>Orange</option>
+                    <option class="item" value=4>Yellow</option>
+                    <option class="item" value=5>Green</option>
+                    <option class="item" value=6>Blue</option>
+                    <option class="item" value=7>Violet</option>
+                    <option class="item" value=8>Grey</option>
+                    <option class="item" value=9>White</option>
+                    <option hidden class="item" value=10>Gold</option>
+                    <option hidden class="item" value=11>Silver</option>
+
+                </select>
+            </div>
+            <div class="secondContainer">
+                <section class="secondBand"></section>
+                <select class="secondBandSelector " id="secondBandSelector">
+                    <option class="hiddenItem">-</option>
+                    <option class="hiddenSecondBand"></option>
+                    <option class="item" value=0>Black</option>
+                    <option class="item" value=1>Brown</option>
+                    <option class="item" value=2>Red</option>
+                    <option class="item" value=3>Orange</option>
+                    <option class="item" value=4>Yellow</option>
+                    <option class="item" value=5>Green</option>
+                    <option class="item" value=6>Blue</option>
+                    <option class="item" value=7>Violet</option>
+                    <option class="item" value=8>Grey</option>
+                    <option class="item" value=9>White</option>
+                    <option hidden class="item" value=10>Gold</option>
+                    <option hidden class="item" value=11>Silver</option>
+
+                </select>
+            </div>
+            <div class="thirdContainer">
+                <section class="thirdBand"></section>
+                <select class="thirdBandSelector " id="thirdBandSelector">
+                    <option class="hiddenItem">-</option>
+                    <option class="hiddenThirdBand"></option>
+                    <option class="item" value=0>Black</option>
+                    <option class="item" value=1>Brown</option>
+                    <option class="item" value=2>Red</option>
+                    <option class="item" value=3>Orange</option>
+                    <option class="item" value=4>Yellow</option>
+                    <option class="item" value=5>Green</option>
+                    <option class="item" value=6>Blue</option>
+                    <option class="item" value=7>Violet</option>
+                    <option class="item" value=8>Grey</option>
+                    <option class="item" value=9>White</option>
+                    <option hidden class="item" value=10>Gold</option>
+                    <option hidden class="item" value=11>Silver</option>
+                </select>
+            </div>
+            <div class="fourthContainer">
+                <section class="fourthBand"></section>
+                <select class="fourthBandSelector " id="fourthBandSelector">
+                    <option class="hiddenItem">-</option>
+                    <option class="hiddenFourthBand"> </option>
+                    <option class="item" value=0>Black</option>
+                    <option class="item" value=1>Brown</option>
+                    <option class="item" value=2>Red</option>
+                    <option class="item" value=3>Orange</option>
+                    <option class="item" value=4>Yellow</option>
+                    <option class="item" value=5>Green</option>
+                    <option class="item" value=6>Blue</option>
+                    <option class="item" value=7>Violet</option>
+                    <option class="item" value=8>Grey</option>
+                    <option class="item" value=9>White</option>
+                    <option class="item" value=10>Gold</option>
+                    <option class="item" value=11>Silver</option>
+                </select>
+            </div>
+            <div class="fifthContainer">
+                <section class="fifthBand"></section>
+                <select class="fifthBandSelector" id="fifthBandSelector">
+                    <option class="hiddenItem">-</option>
+                    <option class="hiddenFifthBand"> </option>
+                    <option hidden class="item" value=0>Black</option>
+                    <option class="item" value=1>Brown</option>
+                    <option class="item" value=2>Red</option>
+                    <option hidden class="item" value=3>Orange</option>
+                    <option hidden class="item" value=4>Yellow</option>
+                    <option class="item" value=5>Green</option>
+                    <option class="item" value=6>Blue</option>
+                    <option class="item" value=7>Violet</option>
+                    <option class="item" value=8>Grey</option>
+                    <option hidden class="item" value=9>White</option>
+                    <option class="item" value=10>Gold</option>
+                    <option class="item" value=11>Silver</option>
+                </select>
+            </div>
+            <div class="sixthContainer">
+                <section class="sixthBand"></section>
+                <select class="sixthBandSelector" id="sixthBandSelector">
+                    <option class="hiddenItem">-</option>
+                    <option class="hiddenSixthBand"> </option>
+                    <option hidden class="item" value=0>Black</option>
+                    <option class="item" value=1>Brown</option>
+                    <option class="item" value=2>Red</option>
+                    <option class="item" value=3>Orange</option>
+                    <option class="item" value=4>Yellow</option>
+                    <option hidden class="item" value=5>Green</option>
+                    <option class="item" value=6>Blue</option>
+                    <option class="item" value=7>Violet</option>
+                    <option hidden class="item" value=8>Grey</option>
+                    <option hidden class="item" value=9>White</option>
+                    <option hidden class="item" value=10>Gold</option>
+                    <option hidden class="item" value=11>Silver</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="resitorResult">
+            <div class="resultBox">
+                <div class="resultText">
+                    <div class="resultInput">Resistance</div>
+                    <div class="resistance"></div>
+                </div>
+            </div>
+            <div class="resultBox ">
+                <div class="resultText">
+                    <div class="resultInput">Minimum</div>
+                    <div class="minimum"></div>
+                </div>
+            </div>
+            <div class="resultBox ">
+                <div class="resultText">
+                    <div class="resultInput">Maximum</div>
+                    <div class="maximum"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+       <script src="js/script.js"></script>
+</body>
+
+</html>
