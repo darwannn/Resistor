@@ -139,10 +139,24 @@ function onChange() {
     }
 }
 
+function removeResultOnClick () {
+    if (five.checked) {
+        if (thirdBandSelector.value == "-") {
+            removeResult();
+        }
+    } else if (six.checked) {
+        if (sixthBandSelector.value == "-") {
+            removeResult();
+        }
+    }
+}
+
 four.addEventListener("click", function () {
     onChangeStyle("none", "none", "none", "none", "none", "none", "#B31B1B", "white", "white", "white",
         "black", "black");
+        
     calculate();
+    removeResultOnClick ();
 });
 
 five.addEventListener("click", function () {
@@ -155,6 +169,7 @@ five.addEventListener("click", function () {
     fifthBand.classList.add("fiveFifthBand");
     boxFifthBand.classList.add("fiveBoxFifthBand");
     calculate();
+    removeResultOnClick ();
 });
 
 six.addEventListener("click", function () {
@@ -167,6 +182,7 @@ six.addEventListener("click", function () {
     fifthBand.classList.add("sixFifthBand");
     boxFifthBand.classList.add("sixBoxFifthBand");
     calculate();
+    removeResultOnClick ();
 });
 
 function calculate() {
