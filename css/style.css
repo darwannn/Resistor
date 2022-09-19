@@ -3,9 +3,9 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -15,14 +15,15 @@ body {
     background-color: #F5F5F5;
 }
 
-.background {
-    background: transparent linear-gradient(180deg, #bdbcbc 0%, #e4e4e4 100%) 0% 0% no-repeat padding-box;
+.resistor::before {
+    content: '';
     position: absolute;
+    background: #cfcfcf;
     width: 100%;
-    height: 50%;
-    padding-bottom: 15vw;
-    top: 0;
-    z-index: 0 !important;
+    height: 112%;
+    top: 0%;
+    margin-top: -10vw;
+    z-index: 0;
 }
 
 .line {
@@ -31,7 +32,10 @@ body {
     width: 100%;
     height: 1vw;
     margin-bottom: 38.8%;
-    z-index: 0 !important;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .item[value="0"] {
@@ -96,6 +100,8 @@ body {
 
 .resistor {
     width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .resistorImage {
@@ -137,217 +143,148 @@ option {
     display: none;
 }
 
-/* First */
-.boxFirstBand {
+.boxFirstBand,
+.boxSecondBand,
+.boxThirdBand,
+.boxFourthBand,
+.boxFifthBand,
+.boxSixthBand {
     position: absolute;
     width: 5vw;
-    height: 18.57vw;
-    top: 0vw;
-    left: 16.2vw;
     background-color: white;
 }
 
-.firstBand {
+.firstBand,
+.secondBand,
+.thirdBand,
+.fourthBand,
+.fifthBand,
+.sixthBand {
     position: absolute;
     width: 5vw;
     height: 15vw;
     top: -10vw;
-    left: 16.2vw;
     background-color: white;
     opacity: 60%;
+}
+
+.firstBandSelector,
+.secondBandSelector,
+.thirdBandSelector,
+.fourthBandSelector,
+.fifthBandSelector,
+.sixthBandSelector {
+    position: absolute;
+    height: 3.5vw;
+    border-radius: .7vw;
+    background-color: white;
+    margin: 2.2vw 0 0 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+}
+
+/* First */
+.boxFirstBand {
+    height: 18.57vw;
+    top: 0vw;
+    left: 16.2vw;
+}
+
+.firstBand {
+    left: 16.2vw;
 }
 
 .firstBandSelector {
     /* display:none; */
-    position: absolute;
     left: 15.5vw;
     width: 6.4vw;
-    height: 3.5vw;
-    border-radius: .7vw;
-    background-color: white;
-    margin: 2.2vw 0 0 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
 }
 
 /* Second */
 .boxSecondBand {
-    position: absolute;
-    width: 5vw;
     height: 13.6vw;
     top: 2.5vw;
     left: 28vw;
-    background-color: white;
 }
 
 .secondBand {
-    position: absolute;
-    width: 5vw;
-    height: 15vw;
-    top: -10vw;
     left: 28vw;
-    background-color: white;
-    opacity: 60%;
 }
 
 .secondBandSelector {
-    position: absolute;
     width: 6.4vw;
-    height: 3.5vw;
-    border-radius: .7vw;
     left: 27.3vw;
-    background-color: white;
-    margin: 2.2vw 0 0 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
 }
 
 /* Third */
 .boxThirdBand {
     display: none;
-    position: absolute;
-    width: 5vw;
     height: 13.6vw;
     top: 2.5vw;
     left: 35.4vw;
-    background-color: white;
 }
 
 .thirdBand {
     display: none;
-    position: absolute;
-    width: 5vw;
-    height: 15vw;
-    top: -10vw;
     left: 35.4vw;
-    background-color: white;
-    margin: -10px 0 0 0;
-    opacity: 60%;
 }
 
 .thirdBandSelector {
     display: none;
-    position: absolute;
     width: 6.4vw;
-    height: 3.5vw;
-    border-radius: .7vw;
     left: 34.7vw;
-    background-color: white;
-    margin: 2.2vw 0 0 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
 }
 
 /* Fourth */
 .boxFourthBand {
-    position: absolute;
-    width: 5vw;
     height: 13.6vw;
     top: 2.5vw;
     left: 51vw;
-    background-color: white;
-
 }
 
 .fourthBand {
-    position: absolute;
-    width: 5vw;
-    height: 15vw;
-    top: -10vw;
     left: 51vw;
-    background-color: white;
-    margin: -10px 0 0 0;
-    opacity: 60%;
 }
 
 .fourthBandSelector {
-    position: absolute;
     width: 9vw;
-    height: 3.5vw;
-    border-radius: .7vw;
     left: 49vw;
-    background-color: white;
-    margin: 2.2vw 0 0 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
 }
 
 /* Fifth */
 .boxFifthBand {
-    position: absolute;
-    width: 5vw;
     height: 18.57vw;
     top: 0vw;
     left: 78.8vw;
-    background-color: white;
 }
 
 .fifthBand {
-    position: absolute;
-    width: 5vw;
-    height: 15vw;
-    top: -10vw;
     left: 78.8vw;
-    background-color: white;
-    margin: -10px 0 0 0;
-    opacity: 60%;
 }
 
 .fifthBandSelector {
-    position: absolute;
     width: 7.5vw;
-    height: 3.5vw;
     left: 77.6vw;
-    border-radius: .7vw;
-    border-radius: .7vw;
-    background-color: white;
-    margin: 2.2vw 0 0 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
 }
 
 /* Sixth */
 .boxSixthBand {
     display: none;
-    position: absolute;
-    width: 5vw;
     height: 18.57vw;
     top: 0vw;
     left: 78.8vw;
-    background-color: white;
-
 }
 
 .sixthBand {
     display: none;
-    position: absolute;
-    width: 5vw;
-    height: 15vw;
-    top: -10vw;
     left: 78.8vw;
-    background-color: white;
-    margin: -10px 0 0 0;
-    opacity: 60%;
 }
 
 .sixthBandSelector {
     display: none;
-    position: absolute;
     width: 8.5vw;
-    height: 3.5vw;
     left: 77.1vw;
-    border-radius: .7vw;
-    border-radius: .7vw;
-    background-color: white;
-    margin: 2.2vw 0 0 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
 }
 
 .fiveFifthBandSelector {
@@ -405,6 +342,9 @@ option {
     border-radius: 1.4vw;
     box-shadow: 0px 5px 10px #00000029;
     line-height: 1;
+    position: relative;
+    z-index: 2;
+    bottom: 0;
 }
 
 .resultText {
@@ -437,8 +377,11 @@ input {
 }
 
 .bandCount {
-    z-index: 1;
+    z-index: 20;
     margin-bottom: 1.5vw;
+    width: 100%;
+    position: relative;
+    text-align: center;
 }
 
 label {
@@ -449,6 +392,8 @@ label {
     font-size: 1.7vw;
     font-weight: 800;
     background-color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .four {
@@ -462,6 +407,7 @@ label {
     width: 0vw;
     height: 0vw;
     top: -1.8%;
+    z-index: 20;
 }
 
 .fas {
@@ -471,48 +417,46 @@ label {
     font-size: 1.5vw;
     background-color: white;
     color: black;
-    /* transition: 0.2s; */
 }
 
-/*.fas:hover {
-        
-        background-color: #B31B1B;
-        color: white;
-        transform: rotate(-360deg);
-    } */
 @media (max-width: 576px) {
-
     html,
     body {
+        padding: 0;
+        margin: 0;
         display: block;
-        height: 100vw;
+        min-height: 100%;
+        background: #F5F5F5;
     }
 
-    .background {
-        background: transparent linear-gradient(180deg, #bdbcbc 0%, #e4e4e4 100%) 0% 0% no-repeat padding-box;
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        padding-bottom: 15vw;
+    .clear {
+        top: -10px;
+    }
+
+    /* .background {
+        height: 150vw;
+        background-color: #B31B1B;
+        background: #bdbcbc;
+    } */
+
+    .resistor::before {
+        content: '';
         top: 0;
-        z-index: 0 !important;
+        width: 100%;
+        height: 118%;
+        margin-top: -100vw;
+    }
+
+    .resistorbackground {
+        display: none;
     }
 
     .line {
-        background-color: #9e9d9d;
-        position: absolute;
-        width: 100%;
         height: 3vw;
-
-        margin: 1.5vw 0;
-        z-index: 0 !important;
     }
 
     .bandCount {
-        position: relative;
-        z-index: 1;
         margin: 9vw auto 8vw auto;
-        text-align: center;
     }
 
     label {
@@ -539,12 +483,11 @@ label {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 23vw;
+        margin: 23vw 0px 0 0px;
         background-color: #F5F5F5;
         padding: 7vw 0;
-        border-top-left-radius: 9vw;
-        border-top-right-radius: 9vw;
-        bottom: 0;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
     }
 
     .resultBox {
@@ -570,70 +513,31 @@ label {
         font-size: 4.5vw;
     }
 
-    /* First */
-    .firstBand {
-        top: -3vw;
-    }
-
-    .firstBandSelector {
-        margin: 9vw 0 0 0;
-    }
-
-    /* Second */
-    .secondBand {
-        top: -3vw;
-    }
-
-    .secondBandSelector {
-        margin: 9vw 0 0 0;
-    }
-
-    /* Third */
-    .thirdBand {
-        top: -3vw;
-    }
-
-    .thirdBandSelector {
-        margin: 9vw 0 0 0;
-    }
-
-    /* Fourth */
-    .fourthBand {
-        top: -3vw;
-    }
-
-    .fourthBandSelector {
-        margin: 9vw 0 0 0;
-    }
-
-    /* Fifth */
-    .fifthBand {
-        top: -3vw;
-    }
-
-    .fifthBandSelector {
-        margin: 9vw 0 0 0;
-    }
-
-    /* Sixth */
+    .firstBand,
+    .secondBand,
+    .thirdBand,
+    .fourthBand,
+    .fifthBand,
     .sixthBand {
         top: -3vw;
     }
 
+    .firstBandSelector,
+    .secondBandSelector,
+    .thirdBandSelector,
+    .fourthBandSelector,
+    .fifthBandSelector,
     .sixthBandSelector {
         margin: 9vw 0 0 0;
     }
 
-    .fiveFifthBand {
+    .fiveFifthBand,
+    .sixFifthBand {
         top: -3vw;
     }
 
     .sixFifthBandSelector {
         height: 3.5vw;
         left: 62vw;
-    }
-
-    .sixFifthBand {
-        top: -3vw;
     }
 }

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,11 +12,8 @@
 </head>
 
 <body>
-    <div class="background"></div>
-    <div class="background-mobile"></div>
-    <div class="line"></div>
-    
     <div class="bandCount">
+        <div class="line"></div>
         <input type="radio" id="four" name="radio" checked>
         <label class="four" id="labelFour" for='four'>4 Band</label>
         <input type="radio" id="five" name="radio">
@@ -25,9 +21,7 @@
         <input type="radio" id="six" name="radio">
         <label class="six" id="labelSix" for='six'>6 Band</label>
     </div>
-
     <div class="clear" id="clear"><i class="fas fa-undo"></i></div>
-
     <div class="resistor">
         <div class="resistorImage">
             <img src="img/resistor.png" alt="">
@@ -56,7 +50,6 @@
                     <option class="item" value=9>White</option>
                     <option hidden class="item" value=10>Gold</option>
                     <option hidden class="item" value=11>Silver</option>
-
                 </select>
             </div>
             <div class="secondContainer">
@@ -76,7 +69,6 @@
                     <option class="item" value=9>White</option>
                     <option hidden class="item" value=10>Gold</option>
                     <option hidden class="item" value=11>Silver</option>
-
                 </select>
             </div>
             <div class="thirdContainer">
@@ -156,8 +148,8 @@
                 </select>
             </div>
         </div>
-
         <div class="resitorResult">
+            <div class="resistorbackground"></div>
             <div class="resultBox">
                 <div class="resultText">
                     <div class="resultInput">Resistance</div>
@@ -179,8 +171,8 @@
         </div>
     </div>
 
+    <script src="js/script.js"></script>
     
-       <script src="js/script.js"></script>
 </body>
 
 </html>
